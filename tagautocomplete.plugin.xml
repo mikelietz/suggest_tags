@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <pluggable type="plugin">
-	<name>Tag Autocomplete</name>
-	<author url="http://habariproject.org">Habari Community</author>
+	<name>Suggest Tags</name>
+	<author url="http://habariproject.org">The Habari Community</author>
 	<version>0.1</version>
 	<url>http://habariproject.org/</url>
-	<description><![CDATA[Adds autocomplete functionality to the tags input on the publish page.]]></description>
+	<description><![CDATA[Adds a tags input with autocomplete functionality outside of the publish page.]]></description>
 	<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</license>
 	<copyright>2011</copyright>
+	<guid>aee0be54-ead2-4741-87a5-d031023d8baa</guid>
 </pluggable> 
- 
