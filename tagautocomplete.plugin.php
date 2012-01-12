@@ -1,14 +1,14 @@
 <?php
-class TagAutoComplete extends Plugin
+class SuggestTags extends Plugin
 {
 	/**
 	 * Add the required javascript to the publish page
 	 * @param Theme $theme The admin theme instance
 	 **/
-	public function action_admin_header($theme)
+	public function action_header( $theme )
 	{
-		if( $theme->page == 'publish' ) {
-			Stack::add( 'admin_header_javascript', Site::get_url( 'vendor' ) . "/multicomplete.js", 'multicomplete', array( 'jquery.ui' ) );
+	//	if( $theme->page == 'publish' ) {
+			Stack::add( 'header_javascript', Site::get_url( 'vendor' ) . "/multicomplete.js", 'multicomplete', array( 'jquery.ui' ) );
 			$url = '"' . URL::get( 'ajax', array( 'context' => 'auto_tags' ) ) . '"';
 			$script = <<< HEADER_JS
 $(document).ready(function(){
@@ -17,8 +17,8 @@ $(document).ready(function(){
 	});
 });
 HEADER_JS;
-			Stack::add( 'admin_header_javascript',  $script, 'tags_auto', array('jquery', 'multicomplete') );
-		}
+			Stack::add( 'header_javascript',  $script, 'tags_auto', array( 'jquery', 'multicomplete' ) );
+	//	}
 	}
 
 	/**
